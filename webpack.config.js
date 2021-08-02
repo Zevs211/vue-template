@@ -5,9 +5,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
+  devtool: 'eval-source-map',
   entry: './src/main.js',
   output: {
-    filename: 'app.[contenthash].js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
@@ -52,6 +53,12 @@ module.exports = {
     port: 8080,
     hot: true,
     watchContentBase: true,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      name: 'vendor',
+    },
   },
   plugins: [
     new MiniCssExtractPlugin(),
