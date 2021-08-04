@@ -63,7 +63,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Application',
+      title: 'vue-template',
       template: './public/index.html',
       minify: true,
       scriptLoading: 'blocking',

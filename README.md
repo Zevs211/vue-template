@@ -1,1 +1,1 @@
-_Sample Webpack Project_
+_vue-template_
